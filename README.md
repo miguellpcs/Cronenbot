@@ -1,3 +1,3 @@
 # Cronenbot
 NLP PROJECT
-Cronenbot - Movie Recommendation Bot
+Cronenbot - Chatbot for Movie Recommendation
