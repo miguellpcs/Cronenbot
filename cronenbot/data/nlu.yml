@@ -1,0 +1,152 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hey
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - don't
+    - 't
+    - nt
+- intent: ask_about_bot
+  examples: |
+    - who are you?
+    - are you a professor Oblivion?
+    - who am I talking to?
+    - what do you do?
+    - what's your name?
+- intent: ask_about_the_new_flesh
+  examples: |
+    - are the television screen's the retina of the mind?
+    - what's the television screen?
+    - what's the retina of the mind?
+    - I want to put a videotape inside my belly
+    - what's real?
+- intent: find_movie
+  examples: |
+    - I want to watch a movie
+    - Suggest me a movie
+    - I wanna see a movie
+    - I wanna watch [horror](genre) a movie
+    - I would like to watch a [drama](genre) movie
+    - Could you please recommend me a movie?
+    - I want to watch a film
+    - An [action](genre) film, please
+    - A [thriller](genre) movie
+    - We want to watch a movie
+    - [War](genre) movies
+    - [scifi](genre) films
+    - I want a [documentary](genre)
+    - I want a picture from [80s](year)
+    - Please find me a movie from [1997](year) in [french](language) with [subtitles](subtitles)
+    - I want a movie with (subtitles)[subtitles]
+    - I would like to watch a movie in [portuguse](language)
+    - A movie by [Sion Sono](directed_by) please
+    - I want a film by [John Carpenter](directed_by)
+    - A [Park Chan Wook's](directed) picure
+    - i want to watch a [horror](genre) movie by [sion sono](directed_by)
+    - I want to watch a [japanese](language) [horror](genre) movie from [2000](year), with [subtitles](subtitles)
+    - I want to watch a [jhorror](genre) movie from [90s](year) by [Xico-San](directed_by)
+- intent: play_movie
+  examples: |
+    - Please play [Hereditary](movie)
+    - I want to watch [Scream](movie)
+    - Ok, play that movie
+    - Ok, i want to watch that
+    - That's great! I'll take it
+    - Sounds good! Play it
+    - I would like to watch [The Lighthouse](movie)
+    - Play this
+    - Play [Get out](movie)
+- intent: indecision
+  examples: |
+    - I want to watch literally anything
+    - I don't know what to watch
+    - I don't know
+    - I have no idea
+    - A random movie
+    - Randomicly
+- intent: find_info
+  examples: |
+    - Tell me more about it
+    - I want info
+    - What's the plot?
+    - Who's the director?
+    - More information please
+    - more info
+- lookup: genre
+  examples: |
+    - horror
+    - drama
+    - comedy
+    - romance
+    - thriller
+    - action
+    - western
+    - war
+    - documentary
+    - slasher
+    - noir
+    - scifi
+    - science fiction
+    - crime
+    - epic
+    - splatter
+    - spy
+    - documentary
+    - adventure
+    - historical
+    - musical
+- lookup: language
+  examples: |
+    - english
+    - french
+    - portuguese
+    - italian
+    - japanese
+    - chinese
+    - korean
+    - spanish
+    - german
+    - russian

@@ -1,0 +1,113 @@
+version: "2.0"
+
+stories:
+
+- story: genre_path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_movie
+    entities:
+      - genre: null
+  - slot_was_set:
+      - genre: null                
+  - action: utter_confirm_genre
+  - action: utter_suggest_movie
+  - intent: play_movie
+    entities:
+      - movie: null
+  - slot_was_set:
+      - movie: null
+  - action: utter_confirm_movie
+  - action: utter_goodbye
+
+- story: default_path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_movie   
+  - action: utter_ask_for  
+  - intent: deny
+  - action: utter_sorry
+  - action: utter_ask_for        
+
+- story: default_path_confirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_movie   
+  - action: utter_ask_for  
+  - intent: find_movie
+  - action: utter_confirm_genre
+  - action: utter_suggest_movie
+  - intent: play_movie
+  - action: utter_confirm_movie         
+
+- story: info_path
+  steps:
+  - intent: find_info
+  - action: utter_info
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_confirm_movie
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_movie
+    entities:
+    - genre: horror
+    - directed_by: sion sono
+  - slot_was_set:
+    - genre: horror
+  - action: utter_confirm_genre
+  - action: utter_suggest_movie
+  - intent: find_info
+  - action: utter_info
+  - action: utter_did_that_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_movie
+    entities:
+    - language: japanese
+    - genre: horror
+    - year: '2000'
+    - subtitles: subtitles
+  - slot_was_set:
+    - genre: horror
+  - slot_was_set:
+    - year: '2000'
+  - slot_was_set:
+    - subtitles: subtitles
+  - action: utter_confirm_genre
+  - action: utter_suggest_movie
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_movie
+    entities:
+    - genre: jhorror
+    - year: 90s
+    - directed_by: Xico-San
+  - slot_was_set:
+    - genre: jhorror
+  - slot_was_set:
+    - year: 90s
+  - action: utter_confirm_genre
+  - action: utter_suggest_movie
+  - intent: find_info
+  - action: utter_info
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_confirm_movie
+  - intent: goodbye
+  - action: utter_goodbye

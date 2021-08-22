@@ -1,0 +1,18 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Talk about videodrome
+  steps:
+  - intent: ask_about_the_new_flesh
+  - action: utter_prOb_talk
+  
+- rule: Talk about bot
+  steps:
+  - intent: ask_about_tbot
+  - action: utter_talk_about_bot

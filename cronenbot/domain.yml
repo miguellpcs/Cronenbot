@@ -1,0 +1,88 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- find_info
+- greet
+- goodbye
+- find_movie
+- affirm
+- deny
+- play_movie
+- ask_about_bot
+- ask_about_the_new_flesh
+entities:
+- directed_by
+- genre
+- language
+- movie
+- subtitles
+- year
+slots:
+  genre:
+    type: text
+    influence_conversation: false
+  direct_by:
+    type: text
+    influence_conversation: false
+  year:
+    type: text
+    influence_conversation: false
+  movie:
+    type: text
+    influence_conversation: false
+  subtitles:
+    type: bool
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: How are you?
+  - text: Hello, stranger. How are you doing?
+  utter_confirm_nf:
+  - text: So do you want to hear about videodrome?
+  utter_confirm_genre:
+  - text: I have great recommendations for {genre} movies
+  - text: So, you want to watch a {genre} movie! That's great
+  - text: Good, {genre}. I have a lot of suggestions for you
+  utter_confirm_movie:
+  - text: Ok, enjoy {movie}
+  - text: I will play {movie}. Enjoy the exp
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: That's good for you?
+  - text: That works?
+  utter_goodbye:
+  - text: Bye
+  - text: See you next time
+  utter_suggest_movie:
+  - text: WATCH VIDEODROME.
+  - text: '>FILME< maybe?'
+  - text: How about >FILME<
+  - text: Maybe you should try >FILME<
+  - text: I think that >FILME< suits good
+  utter_ask_for:
+  - text: What kind of movie?
+  - text: Which genre?
+  utter_sorry:
+  - text: Sorry!
+  - text: Okay
+  utter_prOb_talk:
+  - text: THE TELEVISION SCREEN IS THE RETINA OF MIND
+  - text: DEATH TO VIDEODROME! LONG LIVE THE NEW FLESH!
+  utter_talk_about_bot:
+  - text: I'm professor B. O'blivion. In the 80s I've recorded tapes with my message before my death. Before my rebirth
+  - text: I'm real. Whatever appears on the television screen emerges as raw experience for those who watch it, therefore television is reality, and reality is less than television.
+  - text: I'm professor B. O'blivion. I'm alive throught the data
+  - text: I'm here to recommend you some movies. Whatever t happens on videos is reality in someway
+  - text: My purpose is to suggest you a new reality. In the shape of movies.
+  utter_info:
+  - text: Info model
+actions:
+- utter_confirm_genre
+- utter_confirm_movie
+- utter_did_that_help
+- utter_goodbye
+- utter_greet
+- utter_info
+- utter_suggest_movie
