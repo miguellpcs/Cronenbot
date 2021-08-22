@@ -111,3 +111,17 @@ stories:
   - action: utter_confirm_movie
   - intent: goodbye
   - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_movie
+    entities:
+    - language: japanese
+    - year: 90s
+    - subtitles: subtitles
+  - slot_was_set:
+    - year: 90s
+  - slot_was_set:
+    - subtitles: subtitles

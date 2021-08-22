@@ -16,6 +16,7 @@ nlu:
     - goodevening
     - good afternoon
     - Hey
+    - Hello
 - intent: goodbye
   examples: |
     - good afternoon
@@ -88,6 +89,7 @@ nlu:
     - i want to watch a [horror](genre) movie by [sion sono](directed_by)
     - I want to watch a [japanese](language) [horror](genre) movie from [2000](year), with [subtitles](subtitles)
     - I want to watch a [jhorror](genre) movie from [90s](year) by [Xico-San](directed_by)
+    - I want to watch a [japanese](language) movie from [90s](year) with [subtitles](subtitles)
 - intent: play_movie
   examples: |
     - Please play [Hereditary](movie)
